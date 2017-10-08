@@ -1,0 +1,10 @@
+"lastprop"
+{
+	"base"		    "lastprop"
+    "title"         "Last Prop Standing"
+
+    "version"       "0.1.0"
+    "menusystem"	"1"
+    "maps"		    "^ph_"
+	
+}
