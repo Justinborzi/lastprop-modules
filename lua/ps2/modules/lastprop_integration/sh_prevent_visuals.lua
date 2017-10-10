@@ -1,5 +1,5 @@
 local function hideOnProps(ply)
-	if ply:IsSpec() or ply:IsDisguised() or ply:IsObserver() then
+	if ply:IsSpec() or ply:IsDisguised() or not ply:Alive() then
 		return false
 	end
 end

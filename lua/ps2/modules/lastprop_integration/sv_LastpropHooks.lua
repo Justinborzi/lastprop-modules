@@ -77,6 +77,7 @@ function Pointshop2.PropHunt.OnRoundEnd( teamID, num )
 			if not IsValid( v ) then
 				return
 			end
+
 			if v:Alive() and v:Team( ) == TEAM.PROPS then
 				v:PS2_AddStandardPoints( S('RoundWin.AliveBonus'), 'Alive Bonus', true )
 			end
@@ -95,10 +96,11 @@ function Pointshop2.PropHunt.OnRoundEnd( teamID, num )
 			if not IsValid( v ) then
 				return
 			end
+
 			if v:Alive() and v:Team( ) == TEAM.HUNTERS then
 				v:PS2_AddStandardPoints( S('RoundWin.AliveBonus'), 'Alive Bonus', true )
 			end
-			local timeElapsed = GAMEMODE:RoundEndTime() - CurTime()
+			local timeElapsed = GetGlobalFloat( "RoundEndTime" ) - CurTime()
 			timeElapsed = timeElapsed > 0 and timeElapsed or GAMEMODE:GetConfig('round_time')
 			local pot = GAMEMODE.Jackpot * ( 1 - timeElapsed / GAMEMODE:GetConfig('round_time') )
 			v:PS2_AddStandardPoints( math.floor( pot / aliveHuntersCount ), 'Winning the round', true )
