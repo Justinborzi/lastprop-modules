@@ -1,0 +1,1 @@
+CreateConVar('lps_debug', '1', { FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY })

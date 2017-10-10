@@ -1,1 +1,1 @@
-CreateConVar('lps_logs', '15', { FCVAR_SERVER_CAN_EXECUTE, FCVAR_NOTIFY })
+CreateConVar('lps_logs', '15', { FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY })
