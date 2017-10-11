@@ -2,7 +2,67 @@ local commands = {
     -------------------------------------------------------------------------
     --- Gamemode
     -------------------------------------------------------------------------
-
+    endround = {
+        category    = "Lastprop",
+        command     = "ulx endround",
+        func        = ulx.endround,
+        say         = { "!endround" },
+        help        = "Ends the round.",
+        access      = ULib.ACCESS_ADMIN,
+    },
+    endgame = {
+        category    = "Lastprop",
+        command     = "ulx endgame",
+        func        = ulx.endgame,
+        say         = { "!endgame" },
+        help        = "Ends game.",
+        access      = ULib.ACCESS_ADMIN
+    },
+    setroundtime = {
+        category    = "Lastprop",
+        command     = "ulx setroundtime",
+        func        = ulx.setroundtime,
+        say         = { "!setroundtime" },
+        help        = "Sets round time.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.NumArg, min=5, default=30, max=1800, ULib.cmds.optional, hint="Round time" },
+        }
+    },
+    addroundtime = {
+        category    = "Lastprop",
+        command     = "ulx addroundtime",
+        func        = ulx.addroundtime,
+        say         = { "!addroundtime" },
+        help        = "Adds time to round.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.NumArg, min=5, default=30, max=1800, ULib.cmds.optional, hint="Round time" },
+        }
+    },
+    undisguise = {
+        category    = "Lastprop",
+        command     = "ulx undisguise",
+        func        = ulx.undisguise,
+        say         = { "!undisguise" },
+        help        = "Undisguises a player.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.PlayerArg }
+        }
+    },
+    taunt = {
+        category    = "Lastprop",
+        command     = "ulx taunt",
+        func        = ulx.taunt,
+        say         = { "!taunt" },
+        help        = "Makes player taunt.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.PlayerArg },
+            { type=ULib.cmds.StringArg, hint="Taunt", ULib.cmds.optional},
+        }
+    },
     -------------------------------------------------------------------------
     --- mapvote
     -------------------------------------------------------------------------
@@ -14,7 +74,7 @@ local commands = {
         help        = "Starts/Stops a mapvote.",
         access      = ULib.ACCESS_ADMIN,
         params      = {
-            { type=ULib.cmds.NumArg, min=15, default=20, max=60, ULib.cmds.optional, hint="Votetime" },
+            { type=ULib.cmds.NumArg, min=15, default=20, max=60, ULib.cmds.optional, hint="Vote time" },
             { type=ULib.cmds.BoolArg, invisible=true },
         },
         opposite    = {
