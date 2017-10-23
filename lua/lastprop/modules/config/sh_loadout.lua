@@ -47,8 +47,8 @@ GM.loadouts[TEAM.HUNTERS] ={
 Structure:
 GM.loadouts[TEAM.ID] = {
     weapon_name = {
-        primary = {'ammo_name', 1000 (Ammo amount)}, Primary ammo
-        secondary = {'ammo_name', 1000 (Ammo amount)}, Secondary ammo
+        primary = {'ammo_name', 1000 (Ammo amount)}, -- Primary ammo
+        secondary = {'ammo_name', 1000 (Ammo amount)},-- Secondary ammo
     }
 },
 
