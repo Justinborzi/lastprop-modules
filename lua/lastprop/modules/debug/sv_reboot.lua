@@ -1,7 +1,7 @@
 lps = lps or {}
 
 function lps:Reboot()
-    util.Notify(nil, 'UPDATE RECIEVED FROM GIT: Mapvote starting to refresh gamemode!')
+    util.Notify(nil, 'UPDATE RECEIVED FROM GIT: Mapvote starting after round to refresh gamemode!')
     if (#player.GetAll() > 1) then
         if (GAMEMODE:InGame()) then
             hook.Add("CanStartRound", "Reboot:CanStartRound", function() return false end)
