@@ -1,10 +1,10 @@
-"lastprop"
+"prop_hunt"
 {
 	"base"		    "lastprop"
-    "title"         "Last Prop Standing"
+    "title"         "Prop Hunt"
 
     "version"       "0.1.0"
     "menusystem"	"1"
     "maps"		    "^ph_"
-	
+
 }
