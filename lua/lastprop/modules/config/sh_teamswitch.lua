@@ -23,7 +23,7 @@ Example Team Switch Limit:
 
 This hook is called everytime a player request to switch to another team.
 
-hook.Add('PlayerMaxTeamSwitch', 'ULX:MaxTeamSwitch', function(ply, teamID)
+hook.Add('PlayerMaxTeamSwitch', 'ULX:PlayerMaxTeamSwitch', function(ply, teamID)
 
     if (table.HasValue({TEAM.SPECTATORS, TEAM.UNASSIGNED, TEAM.CONNECTING}, teamID)) then
         return 0 -- 0 means they can switch unlimited times, or to bypass the current switch
