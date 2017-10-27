@@ -60,9 +60,49 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.PlayerArg },
-            { type=ULib.cmds.StringArg, hint="Taunt", ULib.cmds.optional},
+            { type=ULib.cmds.StringArg, hint="Taunt" },
+            { type=ULib.cmds.StringArg, hint="Pack" },
         }
     },
+    forceswap = {
+        category    = "Lastprop",
+        command     = "ulx fswap",
+        func        = ulx.forceswap,
+        say         = { "!fswap" },
+        help        = "Makes player join the opposite team.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.PlayerArg },
+        }
+    },
+    fspec = {
+        category    = "Lastprop",
+        command     = "ulx fspec",
+        func        = ulx.fspec,
+        say         = { "!fspec" },
+        help        = "Makes player join spectators/leave team.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.PlayerArg },
+        }
+        opposite    = {
+            command = "ulx unspec",
+            args    =  { _, _, true },
+            say     = {"!unspec"}
+        }
+    },
+    kliner = {
+        category    = "Lastprop",
+        command     = "ulx kliner",
+        func        = ulx.kliner,
+        say         = { "!kliner" },
+        help        = "Makes player turn into a kliner.",
+        access      = ULib.ACCESS_ADMIN,
+        params      = {
+            { type=ULib.cmds.PlayerArg },
+        }
+    },
+
     -------------------------------------------------------------------------
     --- mapvote
     -------------------------------------------------------------------------
