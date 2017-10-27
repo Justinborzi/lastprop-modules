@@ -102,8 +102,12 @@ function command:Execute(player, silent, arguments)
         return;
     end;
 
-    if (target_ply:IsDisguised()) then
-        target_ply:UnDisguise()
+    if (target:IsDisguised()) then
+        target:UnDisguise()
+
+        if target:IsStuck() then
+            target:UnStick()
+        end
         serverguard.Notify(nil,
         SERVERGUARD.NOTIFY.GREEN, serverguard.player:GetName(player),
         SERVERGUARD.NOTIFY.WHITE, " made ",
