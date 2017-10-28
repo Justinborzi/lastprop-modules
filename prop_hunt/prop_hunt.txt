@@ -1,14 +1,14 @@
 "prop_hunt"
 {
-	"base"		    "lastprop"
+    "base"          "lastprop"
     "title"         "Last Prop Standing"
 
     "version"       "1.0.0"
-    "menusystem"	"1"
-    "maps"		    "^ph_"
+    "menusystem"    "1"
+    "maps"          "^ph_"
     "workshopid"    "1150837716"
-	
-	"author_name"   "Nerdism"
+
+    "author_name"   "Nerdism"
     "author_email"  "nerdism.io@gmail.com"
     "author_url"    "https://github.com/gluaws/"
     "support_url"   "https://discord.gg/hF7Cqe9"
