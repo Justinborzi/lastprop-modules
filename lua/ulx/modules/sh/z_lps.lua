@@ -16,7 +16,7 @@ local commands = {
         func        = ulx.endgame,
         say         = { "!endgame" },
         help        = "Ends game.",
-        access      = ULib.ACCESS_ADMIN
+        access      = ULib.ACCESS_ADMIN,
     },
     setroundtime = {
         category    = "Lastprop",
@@ -27,7 +27,7 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.NumArg, min=5, default=30, max=1800, ULib.cmds.optional, hint="Round time" },
-        }
+        },
     },
     addroundtime = {
         category    = "Lastprop",
@@ -38,7 +38,7 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.NumArg, min=5, default=30, max=1800, ULib.cmds.optional, hint="Round time" },
-        }
+        },
     },
     undisguise = {
         category    = "Lastprop",
@@ -49,7 +49,7 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.PlayerArg }
-        }
+        },
     },
     taunt = {
         category    = "Lastprop",
@@ -62,7 +62,7 @@ local commands = {
             { type=ULib.cmds.PlayerArg },
             { type=ULib.cmds.StringArg, hint="Taunt" },
             { type=ULib.cmds.StringArg, hint="Pack" },
-        }
+        },
     },
     forceswap = {
         category    = "Lastprop",
@@ -73,7 +73,7 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.PlayerArg },
-        }
+        },
     },
     fspec = {
         category    = "Lastprop",
@@ -84,12 +84,12 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.PlayerArg },
-        }
+        },
         opposite    = {
             command = "ulx unspec",
             args    =  { _, _, true },
-            say     = {"!unspec"}
-        }
+            say     = {"!unspec"},
+        },
     },
     kliner = {
         category    = "Lastprop",
@@ -100,7 +100,7 @@ local commands = {
         access      = ULib.ACCESS_ADMIN,
         params      = {
             { type=ULib.cmds.PlayerArg },
-        }
+        },
     },
 
     -------------------------------------------------------------------------
@@ -120,8 +120,8 @@ local commands = {
         opposite    = {
             command = "ulx unmapvote",
             args    =  { _, _, true },
-            say     = {"!unmapvote"}
-        }
+            say     = {"!unmapvote"},
+        },
     },
     rtvreset = {
         category    = "Mapvote",
