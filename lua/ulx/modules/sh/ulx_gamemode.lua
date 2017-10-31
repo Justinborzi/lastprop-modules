@@ -47,7 +47,7 @@ function ulx.undisguise(calling_ply, target_ply)
 end
 
 function ulx.kliner( calling_ply, target_ply )
-    if (not target_ply:Team() ~= TEAM.PROPS) then
+    if (target_ply:Team() ~= TEAM.PROPS) then
         ULib.tsayError(calling_ply, "#T is not a prop!", target_ply)
         return
     end
