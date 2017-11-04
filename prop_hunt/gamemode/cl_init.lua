@@ -1,1 +1,1 @@
-DeriveGamemode('lastprop')
+include('sh_init.lua')

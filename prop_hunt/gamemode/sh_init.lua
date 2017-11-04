@@ -1,0 +1,4 @@
+DeriveGamemode('lastprop')
+
+TEAM_HUNTERS = TEAM.HUNTERS
+TEAM_PROPS = TEAM.PROPS
