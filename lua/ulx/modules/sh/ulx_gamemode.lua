@@ -76,7 +76,7 @@ function ulx.fspec(calling_ply, opposite)
         return
     end
     GAMEMODE:PlayerSetTeam(target_ply, opposite and team.BestAutoJoinTeam() or TEAM.SPECTATORS)
-    ulx.fancyLogAdmin( calling_ply, opposite and "#A forced #T to spectators!" or "#A forced #T to join the game!", target_ply )
+    ulx.fancyLogAdmin( calling_ply, opposite and "#A forced #T to join the game!" or "#A forced #T to spectators!", target_ply )
 end
 
 function ulx.forceswap( calling_ply, target_ply )
