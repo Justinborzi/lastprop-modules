@@ -20,7 +20,7 @@ end
 function ulx.setroundtime(calling_ply, time)
     if (GAMEMODE:InRound()) then
         GAMEMODE:SetRoundTime(time)
-        ulx.fancyLogAdmin(calling_ply, "#A set round time to #s!", time)
+        ulx.fancyLogAdmin(calling_ply, "#A set the round time to #s!", time)
     end
 end
 
@@ -43,7 +43,7 @@ function ulx.undisguise(calling_ply, target_ply)
         target_ply:UnStick()
     end
 
-    ulx.fancyLogAdmin(calling_ply, "#A made #T undisguise!", target_ply)
+    ulx.fancyLogAdmin(calling_ply, "#A has made #T undisguise!", target_ply)
 end
 
 function ulx.kliner( calling_ply, target_ply )
@@ -55,7 +55,7 @@ function ulx.kliner( calling_ply, target_ply )
     if target_ply:IsStuck() then
         target_ply:UnStick()
     end
-    ulx.fancyLogAdmin( calling_ply, "#A has forced #T to become a kliner.", target_ply )
+    ulx.fancyLogAdmin( calling_ply, "#A has forced #T to become kliner.", target_ply )
 end
 
 function ulx.taunt(calling_ply, target_ply, taunt, pack)
@@ -69,7 +69,7 @@ end
 
 function ulx.fspec(calling_ply, opposite)
     if (not opposite and target_ply:Team() == TEAM.SPECTATORS) then
-        ULib.tsayError(calling_ply, "#T is already a spectator!", target_ply)
+        ULib.tsayError(calling_ply, "#T is already spectating!", target_ply)
         return
     elseif (opposite and target_ply:Team() ~= TEAM.SPECTATORS) then
         ULib.tsayError(calling_ply, "#T is not spectating!", target_ply)
