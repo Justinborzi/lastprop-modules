@@ -26,7 +26,7 @@ This hook is called everytime a player request to switch to another team.
 hook.Add('PlayerMaxTeamSwitch', 'ULX:PlayerMaxTeamSwitch', function(ply, teamID)
 
     if (table.HasValue({TEAM.SPECTATORS, TEAM.UNASSIGNED, TEAM.CONNECTING}, teamID)) then
-        return 0 -- 0 means they can switch unlimited times, or to bypass the current switch
+        return 0 -- 0 means they can switch an unlimited amount of times, or bypass the current switch.
     end
 
     local switches = {
@@ -42,7 +42,7 @@ hook.Add('PlayerMaxTeamSwitch', 'ULX:PlayerMaxTeamSwitch', function(ply, teamID)
 
     if (amount) then
         if (amount > 0) then
-            util.Notify(ply, NOTIFY.RED, string.format('You have %s more team switches available this game.', amount - ply:GetVar('teamChanges', 0)))
+            util.Notify(ply, NOTIFY.RED, string.format('You have %s more team switches available this match.', amount - ply:GetVar('teamChanges', 0)))
         end
         return amount
     end
